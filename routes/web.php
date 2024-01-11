@@ -39,6 +39,14 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
         return view('admin.dasbordmonitoring.dasbordmonitoring');
     })->name('dasbordmonitoring');
 
+    Route::get('/reportingkpi', function () {
+        return view('admin.reportingkpi.reporting');
+    })->name('reportingkpi');
+
+    Route::get('/employee', function () {
+        return view('admin.employee.employee');
+    })->name('employee');
+
     // Route::get('/start-streaming', [Streaming::class, 'startStreaming'])->name('start.streaming');
     // Route::get('/start-streaming', [StreamingController::class, 'startStreaming'])->name('start.streaming');
 
