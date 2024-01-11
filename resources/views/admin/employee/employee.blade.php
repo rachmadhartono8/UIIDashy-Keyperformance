@@ -1,16 +1,16 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="row">
-            <div class="col-12 col-md-6 order-md-1 order-last">
+            {{-- <div class="col-12 col-md-6 order-md-1 order-last">
                 <h3>Data Karyawan</h3>
                 <p class="text-subtitle text-muted">Data Karyawan UII.</p>
-            </div>
+            </div> --}}
             <div class="col-12 col-md-6 order-md-2 order-first">
-                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                {{-- <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item active" aria-current="page">Data Karyawan</li>
                     </ol>
-                </nav>
+                </nav> --}}
             </div>
         </div>
     </x-slot>
