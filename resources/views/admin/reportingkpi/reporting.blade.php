@@ -14,7 +14,6 @@
             </div>
         </div>
     </x-slot>
-
     <html lang="en">
 
     <head>
@@ -57,6 +56,23 @@
                 </h3>
                 <div class="overflow-x-auto">
                     <table class="min-w-full">
+                        <tbody class="text-gray-700">
+                            @foreach($reports as $report)
+                                <tr class="border-b">
+                                    <td class="p-4">{{ $report->nama_karyawan }}</td>
+                                    <td class="p-4">{{ $report->NIP }}</td>
+                                    <td class="p-4">{{ $report->jabatan }}</td>
+                                    <td class="p-4">{{ $report->total_jam_kerja }} Jam</td>
+                                    <td class="p-4">{{ $report->total_kehadiran }} Hari</td>
+                                    <td class="p-4">{{ $report->tepat_waktu }} Hari</td>
+                                    <td class="p-4">{{ $report->terlambat }} Hari</td>
+                                    <td class="p-4">{{ $report->tidak_hadir }} Hari</td>
+                                    <td class="p-4">{{ $report->efektivitas }}%</td>
+                                    <td class="p-4">{{ $report->kinerja }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
                         <thead>
                             <tr class="border-b">
                                 <th class="text-left p-4">
@@ -91,43 +107,6 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="text-gray-700">
-                            <!-- Repeat for each employee -->
-                            <tr class="border-b">
-                                <td class="p-4">
-                                    Rachmad Hartono
-                                </td>
-                                <td class="p-4">
-                                    950543 807487 677964
-                                </td>
-                                <td class="p-4">
-                                    Backend Developer
-                                </td>
-                                <td class="p-4">
-                                    153:25 Jam
-                                </td>
-                                <td class="p-4">
-                                    17 Hari
-                                </td>
-                                <td class="p-4">
-                                    14 Hari
-                                </td>
-                                <td class="p-4">
-                                    3 Hari
-                                </td>
-                                <td class="p-4">
-                                    4 Hari
-                                </td>
-                                <td class="p-4">
-                                    99%
-                                </td>
-                                <td class="p-4">
-                                    Sangat Baik
-                                </td>
-                            </tr>
-                            <!-- Repeat for each employee -->
-                            <!-- ... other employees ... -->
-                        </tbody>
                     </table>
                 </div>
             </div>
@@ -137,13 +116,6 @@
                     </i>
                     No. Telp (0274) 898444
                 </div>
-                {{-- <div class="text-center">
-     <img alt="Universitas Islam Indonesia" class="mx-auto mb-2" height="100" src="{{ asset('/images/logo/logo.png') }}"
-                alt="Logo"></a>}} />
-                <p class="text-blue-600 font-semibold">
-                    Universitas Islam Indonesia
-                </p>
-            </div> --}}
             <div class="text-center">
                 <img alt="Universitas Islam Indonesia" class="mx-auto mb-2" height="100"
                     src="{{ asset('images/logo/logo.png') }}" />
@@ -169,5 +141,4 @@
     </body>
 
     </html>
-    {{-- </x-app-layout> --}}
 </x-app-layout>

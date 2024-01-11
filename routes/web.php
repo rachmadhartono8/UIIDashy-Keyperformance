@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Streaming;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KeyPerformanceKpiReportController;
+use App\Models\KeyPerformanceKpiReport;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +42,8 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
     })->name('dasbordmonitoring');
 
     Route::get('/reportingkpi', function () {
-        return view('admin.reportingkpi.reporting');
+        $data = KeyPerformanceKpiReport::all();
+        return view('admin.reportingkpi.reporting')->with($data);
     })->name('reportingkpi');
 
     Route::get('/employee', function () {
@@ -49,5 +52,9 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
 
     // Route::get('/start-streaming', [Streaming::class, 'startStreaming'])->name('start.streaming');
     // Route::get('/start-streaming', [StreamingController::class, 'startStreaming'])->name('start.streaming');
+
+
+    Route::get('/kpi-reports', [KeyPerformanceKpiReportController::class, 'index']);
+
 
 });
