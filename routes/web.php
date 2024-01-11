@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\Streaming;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KeyPerformanceKpiReportController;
@@ -46,15 +47,16 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
         return view('admin.reportingkpi.reporting')->with($data);
     })->name('kpi-reports');
 
-    Route::get('/employee', function () {
-        return view('admin.employee.employee');
-    })->name('employee');
+    // Route::get('/employee', function () {
+    //     return view('admin.employee.employee');
+    // })->name('employee');
 
     // Route::get('/start-streaming', [Streaming::class, 'startStreaming'])->name('start.streaming');
     // Route::get('/start-streaming', [StreamingController::class, 'startStreaming'])->name('start.streaming');
 
 
     Route::get('/kpi-reports', [KeyPerformanceKpiReportController::class, 'index'])->name('kpi-reports');
+    Route::get('/employee',[EmployeeController::class, 'getDataPegawai'])->name('employee');
 
 
 });

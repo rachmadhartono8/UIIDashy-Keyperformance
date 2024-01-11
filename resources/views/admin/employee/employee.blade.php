@@ -2,13 +2,13 @@
     <x-slot name="header">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Dashboard</h3>
-                <p class="text-subtitle text-muted">This is the main page.</p>
+                <h3>Data Karyawan</h3>
+                <p class="text-subtitle text-muted">Data Karyawan UII.</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Karyawan</li>
                     </ol>
                 </nav>
             </div>
@@ -35,7 +35,7 @@
         </style>
     </head>
 
-    <body class="bg-gray-100">
+    {{-- <body class="bg-gray-100">
         <div class="container mx-auto px-4 py-6">
             <h1 class="text-3xl font-semibold mb-6">
                 Data Karyawan
@@ -194,7 +194,103 @@
                 </div>
             </div>
         </div>
+    </body> --}}
+    <body class="bg-gray-100">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-3xl font-semibold mb-6">
+                Data Karyawan
+            </h1>
+            <div class="bg-white shadow rounded-lg p-6 mb-6">
+                <!-- ... (Bagian Pencarian dan Filter) ... -->
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                            <tr>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Nama Karyawan
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Jabatan
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Email
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Tempat Lahir
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Tanggal Lahir
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Nomor HP
+                                </th>
+                                <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Jabatan
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Perulangan untuk setiap karyawan -->
+                            @foreach ($employee as $employee)
+                            <tr>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <div class="flex items-center">
+                                        {{-- <div class="flex-shrink-0 w-10 h-10">
+                                            <img alt="Profile picture of {{ $employee->nama_karyawan }}"
+                                                class="w-full h-full rounded-full" height="100"
+                                                src="{{ $employee->profile_picture_url }}" width="100" />
+                                        </div> --}}
+                                        <div class="ml-3">
+                                            <p class="text-gray-900 whitespace-no-wrap">
+                                                {{ $employee->nama_karyawan }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ $employee->jabatan }}
+                                    </p>
+                                </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ $employee->email }}
+                                    </p>
+                                </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ $employee->tempat_lahir }}
+                                    </p>
+                                </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ $employee->tanggal_lahir }}
+                                    </p>
+                                </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ $employee->nomor_hp }}
+                                    </p>
+                                </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ $employee->jabatan }}
+                                    </p>
+                                </td>
+                            </tr>
+                            @endforeach
+                            <!-- Akhir perulangan -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ... (Paging Section) ... -->
+
+            </div>
+        </div>
     </body>
+
 
     </html>
 </x-app-layout>
