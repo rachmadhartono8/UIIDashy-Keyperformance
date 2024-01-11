@@ -74,7 +74,8 @@
                         class="rounded-lg mb-3"
                         height="500"
                         width="1000"
-                        src="https://img.youtube.com/vi/CWCMGIG1Y54/maxresdefault.jpg"
+                        src="https://img.youtube.com/vi/mvnMIXLgSJI/maxresdefault.jpg"
+                        {{-- https://www.youtube.com/watch?v=mvnMIXLgSJI --}}
                     />
 
                     <div class="flex justify-between items-center">
@@ -98,7 +99,8 @@
                                 alt="Thumbnail of CCTV footage from 26 Oktober 2023"
                                 class="rounded-lg"
                                 height="120"
-                                src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg"
+                                {{-- src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg" --}}
+                                src="https://img.youtube.com/vi/mvnMIXLgSJI/maxresdefault.jpg"
                                 width="250"/>
                             <div>
                                 <h3 class="text-lg font-medium">
@@ -112,7 +114,8 @@
                         <div class="flex items-center space-x-3">
                             <img alt="Thumbnail of CCTV footage from 25 Oktober 2023" class="rounded-lg"
                                 height="120"
-                                src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg"
+                                {{-- src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg" --}}
+                                src="https://img.youtube.com/vi/mvnMIXLgSJI/maxresdefault.jpg"
                                 width="250" />
                             <div>
                                 <h3 class="text-lg font-medium">
@@ -126,7 +129,8 @@
                         <div class="flex items-center space-x-3">
                             <img alt="Thumbnail of CCTV footage from 24 Oktober 2023" class="rounded-lg"
                                 height="120"
-                                src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg"
+                                {{-- src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg" --}}
+                                src="https://img.youtube.com/vi/mvnMIXLgSJI/maxresdefault.jpg"
                                 width="250" />
                             <div>
                                 <h3 class="text-lg font-medium">
@@ -140,7 +144,8 @@
                         <div class="flex items-center space-x-3">
                             <img alt="Thumbnail of CCTV footage from 23 Oktober 2023" class="rounded-lg"
                                 height="120"
-                                src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg"
+                                {{-- src="https://img.youtube.com/vi/Mx6XVBeyED8/maxresdefault.jpg" --}}
+                                src="https://img.youtube.com/vi/mvnMIXLgSJI/maxresdefault.jpg"
                                 width="250" />
                             <div>
                                 <h3 class="text-lg font-medium">
