@@ -28,8 +28,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 class="text-muted font-semibold">Jumlah Karyawan</h6>
-                                    <h6 class="font-extrabold mb-0">112</h6>
+                                    <h6 class="text-muted font-semibold">Karyawan</h6>
+                                    <h6 class="font-extrabold mb-0">5</h6>
                                 </div>
                             </div>
                         </div>
@@ -45,8 +45,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 class="text-muted font-semibold">Jumlah Unit</h6>
-                                    <h6 class="font-extrabold mb-0">6</h6>
+                                    <h6 class="text-muted font-semibold">Total Pekerjaan</h6>
+                                    <h6 class="font-extrabold mb-0">5</h6>
                                 </div>
                             </div>
                         </div>
@@ -62,8 +62,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 class="text-muted font-semibold">KPI</h6>
-                                    <h6 class="font-extrabold mb-0">80</h6>
+                                    <h6 class="text-muted font-semibold">Unit Kerja</h6>
+                                    <h6 class="font-extrabold mb-0">6</h6>
                                 </div>
                             </div>
                         </div>
@@ -79,8 +79,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                    <h6 class="text-muted font-semibold">Jumlah Data</h6>
-                                    <h6 class="font-extrabold mb-0">112</h6>
+                                    <h6 class="text-muted font-semibold">Total Video</h6>
+                                    <h6 class="font-extrabold mb-0">3</h6>
                                 </div>
                             </div>
                         </div>
@@ -95,18 +95,20 @@
                             <h4>Rata Rata Kinerja Karyawan</h4>
                         </div>
                         <div class="card-body">
-                            <div id="chart-profile-visit"></div>
+                            <canvas id="chart-profile-visit"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
                 // Data untuk grafik (disesuaikan dengan kebutuhan)
                 var dataRataKinerja = {
                     labels: ["Huda", "Willy", "Anton", "Gana"],
                     datasets: [{
                         label: 'Rata-rata Kinerja',
-                        data: [80, 90, 80, 70],
+                        data: [50, 80, 60, 70],
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
                         borderColor: 'rgba(75, 192, 192, 1)',
                         borderWidth: 1
@@ -161,10 +163,10 @@
                                                 </div>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">Karyawan FTI</p>
+                                                <p class=" mb-0">Junior Developer</p>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">80</p>
+                                                <p class=" mb-0">50</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -177,10 +179,10 @@
                                                 </div>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">Karyawan FK</p>
+                                                <p class=" mb-0">Designer</p>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">90</p>
+                                                <p class=" mb-0">80</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -193,10 +195,10 @@
                                                 </div>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">Karyawan Rektorat</p>
+                                                <p class=" mb-0">System Analyst</p>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">80%</p>
+                                                <p class=" mb-0">60</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -209,7 +211,7 @@
                                                 </div>
                                             </td>
                                             <td class="col-auto">
-                                                <p class=" mb-0">Karyawan FPSB</p>
+                                                <p class=" mb-0">Project Manager</p>
                                             </td>
                                             <td class="col-auto">
                                                 <p class=" mb-0">70</p>
@@ -223,7 +225,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-3">
+        {{-- <div class="col-12 col-lg-3">
             <div class="card">
                 <div class="card-body py-4 px-4">
                     <div class="d-flex align-items-center">
@@ -245,7 +247,7 @@
                     <div id="chart-visitors-profile"></div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </section>
 </div>
 </x-app-layout>
