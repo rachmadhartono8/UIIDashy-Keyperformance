@@ -13,6 +13,5 @@ class KeyPerformanceKpiReportController extends Controller
         return view('admin.reportingkpi.reporting', compact('reports'));
     }
 
-    // Tambahkan fungsi lain jika diperlukan, seperti show, create, update, delete
 }
 

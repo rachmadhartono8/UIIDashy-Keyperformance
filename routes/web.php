@@ -44,7 +44,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
     Route::get('/reportingkpi', function () {
         $data = KeyPerformanceKpiReport::all();
         return view('admin.reportingkpi.reporting')->with($data);
-    })->name('reportingkpi');
+    })->name('kpi-reports');
 
     Route::get('/employee', function () {
         return view('admin.employee.employee');
@@ -54,7 +54,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
     // Route::get('/start-streaming', [StreamingController::class, 'startStreaming'])->name('start.streaming');
 
 
-    Route::get('/kpi-reports', [KeyPerformanceKpiReportController::class, 'index']);
+    Route::get('/kpi-reports', [KeyPerformanceKpiReportController::class, 'index'])->name('kpi-reports');
 
 
 });

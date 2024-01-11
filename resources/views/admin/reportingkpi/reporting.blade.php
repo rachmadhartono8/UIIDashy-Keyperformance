@@ -48,9 +48,9 @@
                 </button>
             </div>
             <div class="bg-white shadow rounded-lg p-8 mb-8">
-                <h2 class="text-2xl font-semibold mb-6">
+                <h3 class="text-2xl font-semibold mb-6">
                     Laporan Key Performance Indicator
-                </h2>
+                </h3>
                 <h3 class="text-xl mb-4">
                     Bulan November 2023
                 </h3>
